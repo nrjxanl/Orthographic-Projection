@@ -77,5 +77,5 @@ function submit() {
     document.getElementById("p1").innerText = "sin θ ≒ " + Math.round(sinTheta * 100) / 100 + "\ncos θ ≒ " + Math.round(cosTheta * 100) / 100 + "\nA'(0, 0, 0)\nB'(5, 0, 0)\nC'(5, " + Math.round(10 * cosTheta * 100) / 100 + ", " + Math.round(10 * sinTheta * 100) / 100 + ")\nD'(0, " + Math.round(10 * cosTheta * 100) / 100 + ", " + Math.round(10 * sinTheta * 100) / 100 + ")"
 
     // A', B', C', D'의 좌표로 구한 정사영의 넓이, 교과서의 정사영의 넓이 공식으로 구한 정사영의 넓이
-    document.getElementById("p2").innerHTML = "A', B', C', D'의 좌표를 이용하여 계산한 정사영의 넓이(S')는 <a>A'B'</a> * <a>B'C'</a> = 5 * " + Math.round(10 * cosTheta * 100) / 100 + " ≒ " + Math.round(5 * 10 * cosTheta * 100) / 100 + "이다.<br>이때 <a>A'B'</a> = <a>AB</a>이며 좌측 그래프와 같이 <a>B'C'</a> = <a>BC</a> * cos θ이다.<br>따라서 S' = <a>AB</a> * <a>BC</a> * cos θ = S * cos θ이며, 이렇게 교과서의 수식 S' = S * cos θ이 성립함을 시각적으로 보일 수 있다.<br>5 * 10 * " + Math.round(cosTheta * 100) / 100 + " = " + Math.round(5 * 10 * cosTheta * 100) / 100 + "이다."
+    document.getElementById("p2").innerHTML = "A', B', C', D'의 좌표를 이용하여 계산한 정사영의 넓이(S')는 <a>A'B'</a> * <a>B'C'</a> = 5 * " + Math.round(10 * cosTheta * 100) / 100 + " ≒ " + Math.round(5 * 10 * cosTheta * 100) / 100 + "이다.<br>이때 <a>A'B'</a> = <a>AB</a>이며 좌측 그래프와 같이 <a>B'C'</a> = <a>BC</a> * cos θ이므로 S' = <a>AB</a> * <a>BC</a> * cos θ = S * cos θ이다."
 }
