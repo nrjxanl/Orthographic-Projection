@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Orthographic Projection</title>
+    </head>
+
+    <body style="display: flex; flex-direction: column; align-items: center; overflow-x: hidden;">
+        <p style="width: 100vw; height: 10vh; text-align: center;">A(0, 0, 0), B(5, 0, 0), C(5, 10, 0), D(0, 10, 0)의 네 점으로 이루어진 도형 직사각형 ABCD를 x축을 축으로 θ만큼 회전시킨 도형을 직사각형 A'B'C'D'라 하고<br>직사각형 ABCD의 넓이와 직사각형 A'B'C'D'의 xy평면으로의 정사영의 넓이를 각각 S, S'라 한다.</p>
+
+        <input id="submit" type="number" onkeyup="submit()" placeholder="도형이 평면과 이루는 각 θ 입력(0°~90°)" min="0" max="90" style="width: 20vw; height: 5vh; border: 2px solid black; border-radius: 10px; background: none; text-align: center;">
+        <div id="value" style="padding: 5px 15px; margin-top: 10px; border: 2px solid black; border-radius: 100px; background: none; font-size: 18px; font-weight: bold;">0°</div>
+
+        <div style="display: flex;">
+            <div style="width: 30vw; margin-right: 10px; display: flex; flex-direction: column; align-items: center;">
+                <canvas id="canvas1" style="width: 250px; height: 250px; border-bottom: 1px solid black; border-left: 1px solid black;"></canvas>
+                <p style="text-align: center;">yz평면을 바라보는 방향에서의 직사각형 A'B'C'D'<br>(가로축: y축, 세로축: z축)<br>(청색: ABCD, 적색: A'B'C'D', 황색: 정사영)</p>
+            </div>
+            <p id="p1" style="width: 20vw; text-align: center;"></p>
+            <div style="width: 30vw; margin-left: 10px; display: flex; flex-direction: column; align-items: center;">
+                <canvas id="canvas2" style="width: 250px; height: 250px; border-bottom: 1px solid black; border-left: 1px solid black;"></canvas>
+                <p style="text-align: center;">xy평면을 바라보는 방향에서의 직사각형 A'B'C'D'<br>(가로축: x축, 세로축: y축)<br>(청색: ABCD, 적색: A'B'C'D')</p>
+            </div>
+        </div>
+        <p id="p2" style="width: 100vw; text-align: center; line-height: 1.6;"></p>
+
+    </body>
+
+    <script src="orthographicProjection.js"></script>
+
+    <style>
+        #p2 > a {text-decoration: overline;}
+    </style>
+
+</html>
